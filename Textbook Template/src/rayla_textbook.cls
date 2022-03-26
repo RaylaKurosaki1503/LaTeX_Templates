@@ -1,6 +1,8 @@
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %! Author: Rayla Kurosaki
 %! https://www.typesetters.se/latex-textbook-template/
 %! https://www.latextemplates.com/template/legrand-orange-book
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{rayla_textbook}[Rayla's Textbook Class]
