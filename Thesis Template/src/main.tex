@@ -1,0 +1,44 @@
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! Author: Rayla Kurosaki
+%! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{rayla_thesis}
+\usepackage{lipsum}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thesis Information
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\myuniversity}{Name of University}
+\newcommand{\myCollege}{Name of College}
+\newcommand{\myDepartment}{Name of Department}
+\newcommand{\myLogo}{images/rit_logo.png}
+\newcommand{\myname}{My Name}
+\newcommand{\myAdvisor}{Name of Research Advisor}
+\newcommand{\thesisTitle}{Title of Thesis}
+\newcommand{\submissionDate}{Submission Date}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+    \maketitle
+
+    \newpage
+    \tableofcontents
+
+    \newpage
+    \begin{abstract}
+        \input{content/abstract.tex}
+    \end{abstract}
+
+    \input{content/section01.tex}
+    \input{content/section02.tex}
+
+    \newpage
+    \bibliography{main}
+    \bibliographystyle{plain}
+
+\end{document}
