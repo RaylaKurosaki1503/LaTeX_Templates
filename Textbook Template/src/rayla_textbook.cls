@@ -18,6 +18,7 @@
 \RequirePackage{blindtext}
 \RequirePackage[strict]{changepage}
 \RequirePackage{fancyhdr}
+\RequirePackage{float}
 \RequirePackage[T1]{fontenc}
 \RequirePackage[top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1cm,marginparsep=2mm]{geometry}
 \RequirePackage{graphicx}
@@ -25,11 +26,22 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{lipsum}
 \RequirePackage{sectsty}
-\RequirePackage[most]{tcolorbox}
 \RequirePackage{tikz}
 \RequirePackage{titletoc}
+\RequirePackage[most]{tcolorbox}
 \RequirePackage{xcolor}
-\RequirePackage{float}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom Commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\university}[1]{\newcommand{\universityloc}{#1}}
+\newcommand{\college}[1]{\newcommand{\collegeloc}{#1}}
+\newcommand{\department}[1]{\newcommand{\departmentloc}{#1}}
+\renewcommand{\title}[1]{\newcommand{\titleloc}{#1}}
+\newcommand{\name}[1]{\newcommand{\nameloc}{#1}}
+\newcommand{\startYear}[1]{\newcommand{\startYearloc}{#1}}
+\newcommand{\bookEdition}[1]{\newcommand{\bookEditionloc}{#1}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -200,120 +212,106 @@
 \newenvironment{boxsummary}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=pink!5,colframe=pink]}{\end{tcolorbox}}
 \newenvironment{summary}{\begin{boxsummary}}{\end{boxsummary}}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abstract Environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{abstract}%
+    {\small\begin{center}%
+    \bfseries{Abstract}}{\end{center}}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Pre Content
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\raylabook}[7]{
-\pagestyle{empty}
+\newcommand{\raylabook}{
 \frontmatter
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Cover Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+\pagestyle{empty}
 \backgroundsetup{scale=1,color=black,opacity=1.0,angle=0,contents={\includegraphics[width=\paperwidth,height=\paperheight]{images/cover}}}
 \BgThispage
 \begin{titlepage}
     \color{white}
 	\center
-	\textsc{\LARGE #1}\\[0.5cm]
-	\textsc{\Large #2}\\[0.5cm]
-	\textsc{\large #3}\\[0.5cm]
+	\textsc{\LARGE \universityloc}\\[0.5cm]
+	\textsc{\Large \collegeloc}\\[0.5cm]
+	\textsc{\large \departmentloc}\\[0.5cm]
 	\rule{\linewidth}{1.0mm}\\[0.5cm]
-	{\huge #4}\\[0.5cm]
+	{\huge \titleloc}\\[0.5cm]
 	\rule{\linewidth}{1.0mm}\\[0.5cm]
-	#5
+	\nameloc
 \end{titlepage}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Title Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-\newpage
+\clearpage
+\pagenumbering{roman}
+\thispagestyle{empty}
 \begin{center}
-    \textsc{\LARGE #1}\\[0.5cm]
-	\textsc{\Large #2}\\[0.5cm]
-	\textsc{\large #3}\\[0.5cm]
+	\textsc{\LARGE \universityloc}\\[0.5cm]
+	\textsc{\Large \collegeloc}\\[0.5cm]
+	\textsc{\large \departmentloc}\\[0.5cm]
 	\begin{figure}[H]
         \centering
         \includegraphics[scale=0.15]{images/Rochester_Institute_of_Techology_Logo}
     \end{figure}
 	\rule{\linewidth}{1.0mm}\\[0.5cm]
-	{\huge #4}\\[0.5cm]
+	{\huge \titleloc}\\[0.5cm]
 	\rule{\linewidth}{1.0mm}\\[0.5cm]
-	#5
+	\nameloc
 \end{center}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Copyright Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-\newpage
+\clearpage
+\thispagestyle{empty}
 \null
 \vfill
 \begin{flushleft}
-    Copyright \copyright \ #6 \ #5 \\
+    Copyright \copyright \ {\startYearloc}-present \ \nameloc \\
     \vspace{5mm}
     \textbf{Copying prohibited} \\
     \vspace{5mm}
     All rights reserved. No part of this publication may be reproduced or transmitted in any form or by any means, electronic or mechanical, including photocopying and recording, or by any information storage or retrieval system, without the prior written permission of the publisher. \\
     \vspace{5mm}
-    Edition #7 \\
+    Edition \bookEditionloc \\
 \end{flushleft}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Blank Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-\newpage
-\clearpage
-\thispagestyle{empty}
-\vspace*{\fill}
-\begin{center}
-This page is intentionally left blank.
-\end{center}
-\vspace*{\fill}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~ Table of Contents Page ~~~~~~~~~~~~~~~~~~~~~~~~~~%
-\newpage
+\clearpage
 \pagestyle{fancy}
 \tableofcontents
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Blank Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+\clearpage
 \checkoddpage
 \ifoddpage
-\newpage
+\else
+\input{pre_content/blank_page.tex}
+\fi
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Title Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 \clearpage
 \thispagestyle{empty}
-\vspace*{\fill}
 \begin{center}
-    This page is intentionally left blank.
+	\textsc{\LARGE \universityloc}\\[0.5cm]
+	\textsc{\Large \collegeloc}\\[0.5cm]
+	\textsc{\large \departmentloc}\\[0.5cm]
+	\begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.15]{images/Rochester_Institute_of_Techology_Logo}
+    \end{figure}
+	\rule{\linewidth}{1.0mm}\\[0.5cm]
+	{\huge \titleloc}\\[0.5cm]
+	\rule{\linewidth}{1.0mm}\\[0.5cm]
+	\nameloc
 \end{center}
-\vspace*{\fill}
-%\else
-\fi
-
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Abstract Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-%\newpage
-%\addcontentsline{toc}{chapter}{Abstract}
-%\chapter*{Abstract}
-%\input{content/abstract}
-
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Preface Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-%\newpage
-%\addcontentsline{toc}{chapter}{PREFACE}
-%\chapter*{PREFACE}
-%\input{content/preface}
-
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Blank Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-%\checkoddpage
-%\ifoddpage
-%\newpage
-%\clearpage
-%\thispagestyle{empty}
-%\vspace*{\fill}
-%\begin{center}
-%    This page is intentionally left blank.
-%\end{center}
-%\vspace*{\fill}
-%\else
-%\fi
-
-\mainmatter
+\clearpage
+\input{pre_content/blank_page.tex}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Post Content
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\raylaEndBook}{
+\backmatter
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Bibliography ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-%\addcontentsline{toc}{part}{\textcolor{black}{Bibliography and Index}}
-\addcontentsline{toc}{part}{\textcolor{black}{Bibliography}}
 \bibliography{main}
 \bibliographystyle{unsrt}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Index ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
