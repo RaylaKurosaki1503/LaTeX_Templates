@@ -223,8 +223,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Pre Content
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\raylabook}{
-\frontmatter
+\newcommand{\raylaStartBook}{
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Cover Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 \pagestyle{empty}
 \backgroundsetup{scale=1,color=black,opacity=1.0,angle=0,contents={\includegraphics[width=\paperwidth,height=\paperheight]{images/cover}}}
@@ -307,7 +306,6 @@
 % Post Content
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\raylaEndBook}{
-\backmatter
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Bibliography ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 \bibliography{main}
 \bibliographystyle{unsrt}
