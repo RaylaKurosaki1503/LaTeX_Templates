@@ -1,12 +1,3 @@
 
-*.gz
-*.toc
-*.ptc
-*.out
-*.log
-*.blg
-*.bbl
-*.aux
-*.iml
 *.xml
-*.bcf
+*.iml
