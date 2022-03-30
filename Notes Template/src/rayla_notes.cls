@@ -5,7 +5,7 @@
 %! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{rayla_notes}[Rayla's Textbook Class]
+\ProvidesClass{rayla_notes}[Rayla's Notes Class]
 \LoadClass[12pt,onecolumn,titlepage,twoside,openany]{book}
 
 
@@ -23,6 +23,7 @@
 \RequirePackage[top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1cm,marginparsep=2mm]{geometry}
 \RequirePackage{graphicx}
 \RequirePackage{hyperref}
+\RequirePackage{imakeidx}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{lipsum}
 \RequirePackage{sectsty}
@@ -50,6 +51,7 @@
 \setlength{\lineskip}{0pt}
 \allowdisplaybreaks
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Colors
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -61,6 +63,7 @@
 \definecolor{blue}{HTML}{0000FF}
 \definecolor{green}{HTML}{00FF00}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Header and footer styling
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -71,16 +74,102 @@
 
 \renewcommand{\headrulewidth}{2pt}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Table of contents styling
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setcounter{tocdepth}{2}
+
+\titlecontents{part}[0cm]{\addvspace{18pt}\large\sffamily\bfseries}{}{}{}
 
 \titlecontents{chapter}[0cm]{\addvspace{14pt}\large\sffamily\bfseries}{\color{black}\contentslabel[\Large\thecontentslabel]{1.25cm}}{}{\color{black}\normalsize\sffamily\bfseries\;\titlerule*[.5pc]{.}\;\thecontentspage}
 
 \titlecontents{section}[1cm]{\addvspace{10pt}\sffamily\bfseries}{\contentslabel[\thecontentslabel]{1.25cm}}{}{\color{black}\normalsize\sffamily\bfseries\;\titlerule*[.5pc]{.}\;\thecontentspage}
 
 \titlecontents{subsection}[2cm]{\addvspace{6pt}\sffamily\bfseries}{\contentslabel[\thecontentslabel]{1.25cm}}{}{\color{black}\normalsize\sffamily\bfseries\;\titlerule*[.5pc]{.}\;\thecontentspage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part Styling
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Numbered part in the table of contents
+\newcommand{\@mypartnumtocformat}[2]{
+	\setlength\fboxsep{0pt}
+	\noindent\colorbox{cyan!20}
+	{\strut\parbox[c][.7cm]{\ecart}{\color{black}\Large\sffamily\bfseries\centering#1}}
+	\hskip\esp\colorbox{cyan!40}{\strut\parbox[c][.7cm]{0.89\linewidth}{\fontsize{12}{0}\sffamily\centering#2}}
+}
+
+% Unnumbered part in the table of contents
+\newcommand{\@myparttocformat}[1]{
+	\setlength\fboxsep{0pt}
+	\noindent\colorbox{cyan!40}{\strut\parbox[c][.7cm]{\linewidth}{\Large\sffamily\centering#1}}
+}
+
+\newlength\esp
+\setlength\esp{4pt}
+\newlength\ecart
+\setlength\ecart{1.2cm}
+\newcommand{\thepartimage}{}
+\newcommand{\partimage}[1]{\renewcommand{\thepartimage}{#1}}%
+
+\def\@part[#1]#2#3{
+    \ifnum \c@secnumdepth >-2\relax
+        \refstepcounter{part}
+        \addcontentsline{toc}{part}{\texorpdfstring{\protect\@mypartnumtocformat{\thepart}{#1}}{\partname~\thepart\ ---\ #1}}
+    \else
+        \addcontentsline{toc}{part}{\texorpdfstring{\protect\@myparttocformat{#1}}{#1}}
+    \fi
+    \startcontents
+    \markboth{}{}
+    {\thispagestyle{empty}
+    \begin{tikzpicture}[remember picture,overlay]
+        \node at (current page.north west){
+        \begin{tikzpicture}[remember picture,overlay]
+            \fill[cyan!20](0cm,0cm) rectangle (\paperwidth,-\paperheight);
+            \node[anchor=south east] at (\paperwidth-1cm,-\paperheight+1cm){\parbox[t][][t]{17.75cm}{\printcontents{l}{0}{\setcounter{tocdepth}{0}}}};
+            \node[anchor=north east] at (\paperwidth-1.5cm,-2cm){\parbox[t][][t]{15cm}{\strut\raggedleft\color{black}\fontsize{30}{30}\sffamily\bfseries#2}};
+            \node[] at (10.75cm,-7.5cm){\parbox[t][][t]{15cm}{\strut\raggedleft\color{black}{\begin{summary}#3\end{summary}}}};
+        \end{tikzpicture}
+        };
+    \end{tikzpicture}
+    }
+\@endpart
+}
+
+\def\@spart#1{
+    \startcontents
+    \phantomsection{
+    \thispagestyle{empty}
+    \begin{tikzpicture}[remember picture,overlay]
+        \node at (current page.north west){
+            \begin{tikzpicture}[remember picture,overlay]
+                \fill[black!20](0cm,0cm) rectangle (\paperwidth,-\paperheight);
+                \node[anchor=north east] at (\paperwidth-1.5cm,-3.25cm){\parbox[t][][t]{15cm}{\strut\raggedleft\color{black}\fontsize{30}{30}\sffamily\bfseries#1}};
+            \end{tikzpicture}
+        };
+    \end{tikzpicture}
+    }
+    \addcontentsline{toc}{part}{\texorpdfstring{
+    \setlength\fboxsep{0pt}
+    \noindent\protect\colorbox{black!40}{\strut\protect\parbox[c][.7cm]{\linewidth}{\Large\sffamily\protect\centering #1\quad\mbox{}}}}{#1}}
+    \@endpart
+}
+
+\def\@endpart{
+    \vfil\newpage
+    \if@twoside
+        \if@openright
+            \null
+            \thispagestyle{empty}%
+            \newpage
+        \fi
+    \fi
+    \if@tempswa
+        \twocolumn
+    \fi
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Chapter Styling
@@ -111,10 +200,12 @@
     \vspace{0.5cm}
 }
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Section styling
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sectionfont{\sf\color{pink}\sectionrule{0ex}{0pt}{-1ex}{1pt}}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Subsection styling
@@ -123,41 +214,26 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Pre Content
+% Custom Summary Environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\raylaStartNotes}{
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Title Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-\clearpage
-\pagenumbering{roman}
-\thispagestyle{empty}
-\begin{center}
-	\textsc{\LARGE \universityloc}\\[0.5cm]
-	\textsc{\Large \collegeloc}\\[0.5cm]
-	\textsc{\large \departmentloc}\\[0.5cm]
-	\begin{figure}[H]
-        \centering
-        \includegraphics[scale=0.15]{images/Rochester_Institute_of_Techology_Logo}
-    \end{figure}
-	\rule{\linewidth}{1.0mm}\\[0.5cm]
-	{\huge \titleloc}\\[0.5cm]
-	\rule{\linewidth}{1.0mm}\\[0.5cm]
-	\nameloc
-\end{center}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~ Table of Contents Page ~~~~~~~~~~~~~~~~~~~~~~~~~~%
-\clearpage
-\pagestyle{fancy}
-\tableofcontents
-}
+\newenvironment{boxsummary}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=pink!5,colframe=pink]}{\end{tcolorbox}}
+\newenvironment{summary}{\begin{boxsummary}}{\end{boxsummary}}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Post Content
+% Abstract Environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\raylaEndNotes}{
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Bibliography ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-\bibliography{main}
-\bibliographystyle{unsrt}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Index ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-}
+\newenvironment{abstract}%
+    {\small\begin{center}%
+    \bfseries{Abstract}}{\end{center}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Index
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{imakeidx}
+\makeindex
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Custom Theorem Environment
@@ -198,6 +274,7 @@
 
 \newenvironment{note}{\begin{boxnote}\begin{envnote}}{\end{envnote}\end{boxnote}}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Custom Example Environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -210,6 +287,7 @@
 
 \newenvironment{example}{\begin{boxexample}\begin{envexample}}{\end{envexample}\end{boxexample}}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Custom Problem Environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -219,7 +297,102 @@
 
 \newenvironment{problem}{\begin{boxproblem}\begin{envproblem}}{\end{envproblem}\end{boxproblem}}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Custom Solution Environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newenvironment{solution}{\noindent\textsf{\color{pink} \fbox{Solution: }} \newline}{\vskip 12pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pre Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\raylaStartNotes}{
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Cover Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%\pagestyle{empty}
+%\backgroundsetup{scale=1,color=black,opacity=1.0,angle=0,contents={\includegraphics[width=\paperwidth,height=\paperheight]{images/cover}}}
+%\BgThispage
+%\begin{titlepage}
+%    \color{white}
+%	\center
+%	\textsc{\LARGE \universityloc}\\[0.5cm]
+%	\textsc{\Large \collegeloc}\\[0.5cm]
+%	\textsc{\large \departmentloc}\\[0.5cm]
+%	\rule{\linewidth}{1.0mm}\\[0.5cm]
+%	{\huge \titleloc}\\[0.5cm]
+%	\rule{\linewidth}{1.0mm}\\[0.5cm]
+%	\nameloc
+%\end{titlepage}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Title Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+\clearpage
+\pagenumbering{roman}
+\thispagestyle{empty}
+\begin{center}
+	\textsc{\LARGE \universityloc}\\[0.5cm]
+	\textsc{\Large \collegeloc}\\[0.5cm]
+	\textsc{\large \departmentloc}\\[0.5cm]
+%	\begin{figure}[H]
+%        \centering
+%        \includegraphics[scale=0.15]{images/Rochester_Institute_of_Techology_Logo}
+%    \end{figure}
+	\rule{\linewidth}{1.0mm}\\[0.5cm]
+	{\huge \titleloc}\\[0.5cm]
+	\rule{\linewidth}{1.0mm}\\[0.5cm]
+	\nameloc
+\end{center}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Copyright Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%\clearpage
+%\thispagestyle{empty}
+%\null
+%\vfill
+%\begin{flushleft}
+%    Copyright \copyright \ {\startYearloc}-present \ \nameloc \\
+%    \vspace{5mm}
+%    \textbf{Copying prohibited} \\
+%    \vspace{5mm}
+%    All rights reserved. No part of this publication may be reproduced or transmitted in any form or by any means, electronic or mechanical, including photocopying and recording, or by any information storage or retrieval system, without the prior written permission of the publisher. \\
+%    \vspace{5mm}
+%    Edition \bookEditionloc \\
+%\end{flushleft}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~ Table of Contents Page ~~~~~~~~~~~~~~~~~~~~~~~~~~%
+\clearpage
+\pagestyle{fancy}
+\tableofcontents
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Blank Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%\clearpage
+%\checkoddpage
+%\ifoddpage
+%\else
+%\input{pre_content/blank_page.tex}
+%\fi
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Title Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%\clearpage
+%\thispagestyle{empty}
+%\begin{center}
+%	\textsc{\LARGE \universityloc}\\[0.5cm]
+%	\textsc{\Large \collegeloc}\\[0.5cm]
+%	\textsc{\large \departmentloc}\\[0.5cm]
+%	\begin{figure}[H]
+%        \centering
+%        \includegraphics[scale=0.15]{images/Rochester_Institute_of_Techology_Logo}
+%    \end{figure}
+%	\rule{\linewidth}{1.0mm}\\[0.5cm]
+%	{\huge \titleloc}\\[0.5cm]
+%	\rule{\linewidth}{1.0mm}\\[0.5cm]
+%	\nameloc
+%\end{center}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Blank Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%\clearpage
+%\input{pre_content/blank_page.tex}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Post Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\raylaEndNotes}{
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Bibliography ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+\bibliography{main}
+\bibliographystyle{unsrt}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Index ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+%\printindex
+}
