@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.3.15)  29 MAR 2022 22:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.3.15)  30 MAR 2022 00:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1100,7 +1100,7 @@ t)
 \openout5 = `main.out'.
 
 \c@lstlisting=\count372
-<images/cover.jpg, id=58, 1622.06pt x 2319.66624pt>
+<images/cover.jpg, id=70, 1622.06pt x 2319.66624pt>
 File: images/cover.jpg Graphic file (type jpg)
 <use images/cover.jpg>
 Package pdftex.def Info: images/cover.jpg  used on input line 28.
@@ -1111,7 +1111,7 @@ Package pdftex.def Info: images/cover.jpg  used on input line 28.
 
 {C:/Users/rayla/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/cov
 er.jpg>]
-<images/Rochester_Institute_of_Techology_Logo.png, id=69, 1027.84pt x 1027.84pt
+<images/Rochester_Institute_of_Techology_Logo.png, id=81, 1027.84pt x 1027.84pt
 >
 File: images/Rochester_Institute_of_Techology_Logo.png Graphic file (type png)
 <use images/Rochester_Institute_of_Techology_Logo.png>
@@ -1154,16 +1154,26 @@ Overfull \hbox (24.07295pt too wide) in paragraph at lines 9--9
 []|[]  [][][][][][]  [][][][][][] 
  []
 
-)
-\tf@toc=\write6
-\openout6 = `main.toc'.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3
 
 
-] (pre_content/blank_page.tex) [4
+])
+\tf@toc=\write6
+\openout6 = `main.toc'.
 
-]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[4]
 File: images/Rochester_Institute_of_Techology_Logo.png Graphic file (type png)
 <use images/Rochester_Institute_of_Techology_Logo.png>
 Package pdftex.def Info: images/Rochester_Institute_of_Techology_Logo.png  used
@@ -1171,8 +1181,8 @@ Package pdftex.def Info: images/Rochester_Institute_of_Techology_Logo.png  used
 (pdftex.def)             Requested size: 154.16934pt x 154.16934pt.
  [5
 
-] (pre_content/blank_page.tex)
-[6
+
+] (pre_content/blank_page.tex) [6
 
 ]
 \c@ttl@toc@default=\count373
@@ -1183,10 +1193,7 @@ c) [1
 
 ] (content/ch00.tex
 Chapter 1.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2
+[2
 
 ]
 
@@ -1234,6 +1241,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [7]
+(C:/Users\rayla\OneDrive\GitHub\LaTeX_Templates\Textbook Template\auxil\main.pt
+c) [8
+
+] (content/test.tex
+Chapter 2.
+[9
+
+]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1242,15 +1257,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[8]
-(C:/Users\rayla\OneDrive\GitHub\LaTeX_Templates\Textbook Template\auxil\main.pt
-c) [9
-
-] (content/test.tex
-Chapter 2.
-[10
-
-]
+[10]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1260,6 +1267,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [11]
+Underfull \vbox (badness 4120) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1269,7 +1279,47 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [12]
-Underfull \vbox (badness 5504) has occurred while \output is active []
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[13]) (content/test.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[14]
+Chapter 3.
+[15
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[16]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[17]
+Underfull \vbox (badness 4120) has occurred while \output is active []
 
 
 
@@ -1280,7 +1330,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[13]
+[18]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1289,7 +1339,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14])
+[19]) (content/test.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1298,15 +1348,119 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[15]
+[20]
+Chapter 4.
+[21
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[22]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[23]
+Underfull \vbox (badness 4120) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[24]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[25]) (content/test.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[26]
+Chapter 5.
+[27
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[28]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[29]
+Underfull \vbox (badness 4120) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[30]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[31])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[32]
 (C:/Users\rayla\OneDrive\GitHub\LaTeX_Templates\Textbook Template\auxil\main.bb
-l) [16
+l) [33
 
 
 ]
 runsystem(makeindex main.idx)...executed safely (allowed).
 
- (main.ind) [17
+ (main.ind) [34
 
 
 ]
@@ -1317,50 +1471,42 @@ runsystem(makeindex main.idx)...executed safely (allowed).
 (C:/Users\rayla\OneDrive\GitHub\LaTeX_Templates\Textbook Template\auxil\main.au
 x)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 9BDD33DDEE7C2834717EDF63E1FBAAA2;471.
+(rerunfilecheck)             Checksum: 53A0099C78D9087B30E055E91FEB1A0E;792.
  ) 
 Here is how much of TeX's memory you used:
- 29233 strings out of 478582
- 593908 string characters out of 2844344
- 991757 words of memory out of 3000000
- 46756 multiletter control sequences out of 15000+600000
- 499507 words of font info for 92 fonts, out of 8000000 for 9000
+ 29394 strings out of 478582
+ 596388 string characters out of 2844344
+ 989001 words of memory out of 3000000
+ 46834 multiletter control sequences out of 15000+600000
+ 497977 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  130i,14n,132p,496b,1885s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti
 1200.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\ecss1440.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
 /dpi600\ecss1200.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecrm1095.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/
-ljfour/jknappen/ec/dpi600\ecss1728.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fon
-ts/pk/ljfour/jknappen/ec/dpi600\ecsx2986.pk> <C:\Users\rayla\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\rayla\AppData\Loca
-l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk> <C:\Users\rayla\AppDat
-a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\rayla\
-AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx2488.pk> <C:\Users\
-rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\
-Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk
-> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1
-200.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600
-\ecrm2488.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
-dpi600\eccc1440.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknapp
-en/ec/dpi600\eccc1728.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/
-jknappen/ec/dpi600\eccc2074.pk><C:/Users/rayla/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/rayla/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/rayla/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/rayla/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/rayl
-a/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Us
-ers/rayla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb
-><C:/Users/rayla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-msy10.pfb><C:/Users/rayla/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmsy8.pfb><C:/Users/rayla/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/symbols/msbm10.pfb>
+pen/ec/dpi600\ecsx1095.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour
+/jknappen/ec/dpi600\ecss1728.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/
+ljfour/jknappen/ec/dpi600\ecsx2986.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fon
+ts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\rayla\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk> <C:\Users\rayla\AppData\Loca
+l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\rayla\AppDat
+a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx2488.pk> <C:\Users\rayla\
+AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\
+rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\
+Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk
+> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2
+488.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600
+\eccc1440.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
+dpi600\eccc1728.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknapp
+en/ec/dpi600\eccc2074.pk><C:/Users/rayla/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmmi10.pfb><C:/Users/rayla/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/rayla/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb>
 Output written on "C:/Users\rayla\OneDrive\GitHub\LaTeX_Templates\Textbook Temp
-late\out\main.pdf" (24 pages, 956761 bytes).
+late\out\main.pdf" (41 pages, 979798 bytes).
 PDF statistics:
- 726 PDF objects out of 1000 (max. 8388607)
- 81 named destinations out of 1000 (max. 500000)
- 199 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 867 PDF objects out of 1000 (max. 8388607)
+ 162 named destinations out of 1000 (max. 500000)
+ 223 words of extra memory for PDF output out of 10000 (max. 10000000)
 

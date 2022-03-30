@@ -267,7 +267,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Custom Note Environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newenvironment{boxnote}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=cyan!5,colframe=cyan]}{\end{tcolorbox}}
+\newenvironment{boxnote}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=yellow!10!white,boxrule=0pt,frame hidden]}{\end{tcolorbox}}
 
 \newtheoremstyle{stylenote}{0pt}{0pt}{\normalfont}{0pt}{\small\bf\sffamily\color{black}}{: }{0em}{\small\sffamily\color{black}\thmname{#1}\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black}(#3)}\index{#3}}
 
@@ -280,7 +280,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Custom Example Environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newenvironment{boxexample}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=yellow!10!white,boxrule=0pt,frame hidden]}{\end{tcolorbox}}
+\newenvironment{boxexample}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=cyan!5,colframe=cyan]}{\end{tcolorbox}}
 
 \newtheoremstyle{styleexample}{0pt}{0pt}{\normalfont}{0pt}{\small\bf\sffamily\color{black}}{: }{0.25em}{\small\sffamily\color{black}\thmname{#1}\nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black}(#3)}}
 
