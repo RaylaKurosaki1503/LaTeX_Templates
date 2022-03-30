@@ -1,0 +1,99 @@
+\begin{thebibliography}{10}
+
+\bibitem{book:2946356}
+James Stewart.
+\newblock {\em Calculus: Early Transcendentals}.
+\newblock Cengage Learning, 9th edition, 2020.
+
+\bibitem{book:2172573}
+R.~Kent Nagle.
+\newblock {\em Fundamentals of Differential Equations}.
+\newblock Pearson, 9th edition, 2017.
+
+\bibitem{book:2637954}
+David Poole.
+\newblock {\em Linear Algebra: A Modern Introduction}.
+\newblock Cengage Learning, 4th edition, 2015.
+
+\bibitem{book:2459384}
+Dennis~G. Zill.
+\newblock {\em Differential Equations with Boundary-Value Problems}.
+\newblock Cengage Learning, 9th edition, 2018.
+
+\bibitem{book:2519110}
+R.~Kent Nagle.
+\newblock {\em Fundamentals of Differential Equations and Boundary Value
+  Problems.}
+\newblock Pearson, 7th edition, 2017.
+
+\bibitem{book:2478639}
+Steven~H. Strogatz.
+\newblock {\em Nonlinear Dynamics and Chaos : With Applications to Physics,
+  Biology, Chemistry, and Engineering}.
+\newblock CRC Press, 2nd edition, 2018.
+
+\bibitem{book:691902}
+Dennis~G. Zill.
+\newblock {\em A First Course in Complex Analysis with Applications}.
+\newblock Jones and Bartlett Publishers, Inc., 1st edition, 2003.
+
+\bibitem{book:8987}
+Lloyd~N. Trefethen.
+\newblock {\em Numerical Linear Algebra}.
+\newblock Society for Industrial and Applied Mathematics, 1997.
+
+\bibitem{book:1022170}
+Hans Sagan.
+\newblock {\em Introduction to the Calculus of Variations}.
+\newblock Dover Books on Mathematics. Dover Publications, reprint edition,
+  1992.
+
+\bibitem{book:2173932}
+J.~David Logan.
+\newblock {\em Applied Mathematics}.
+\newblock Wiley, 4th edition, 2013.
+
+\bibitem{book:804515}
+Kendall Atkinson.
+\newblock {\em An Introduction to Numerical Analysis}.
+\newblock Wiley, 2nd edition, 1989.
+
+\bibitem{book:2421431}
+Biswa~Nath Datta.
+\newblock {\em Numerical Linear Algebra and Applications}.
+\newblock Volume 116 of Other Titles in Applied Mathematics. Society for
+  Industrial and Applied Mathematics, 2nd edition, 2010.
+
+\bibitem{book:8818}
+Nicholas~J. Higham.
+\newblock {\em Accuracy and Stability of Numerical Algorithms}.
+\newblock Society for Industrial and Applied Mathematics, 2nd edition, 2002.
+
+\bibitem{book:8677}
+Alfio Quarteroni.
+\newblock {\em Numerical Mathematics}.
+\newblock Texts in Applied Mathematics 37. Springer-Verlag Berlin Heidelberg,
+  2nd edition, 2007.
+
+\bibitem{book:2490640}
+Timothy Sauer.
+\newblock {\em Numerical Analysis}.
+\newblock Pearson, 3rd edition, 2017.
+
+\bibitem{book:269257}
+R.~Bulirsch.
+\newblock {\em Introduction to Numerical Analysis}.
+\newblock Texts in Applied Mathematics 12. Springer New York, 3rd edition,
+  2002.
+
+\bibitem{book:305189}
+Yehuda Pinchover.
+\newblock {\em An Introduction to Partial Differential Equations}.
+\newblock Cambridge University Press, 2005.
+
+\bibitem{book:898379}
+Walter~A Strauss.
+\newblock {\em Partial Differential Equations : An Introduction}.
+\newblock Wiley, 2nd edition, 2009.
+
+\end{thebibliography}
