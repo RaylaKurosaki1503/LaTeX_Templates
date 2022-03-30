@@ -23,6 +23,7 @@
 \RequirePackage[top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1cm,marginparsep=2mm]{geometry}
 \RequirePackage{graphicx}
 \RequirePackage{hyperref}
+\RequirePackage{imakeidx}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{lipsum}
 \RequirePackage{sectsty}
@@ -52,6 +53,7 @@
 \setlength{\lineskip}{0pt}
 \allowdisplaybreaks
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Colors
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -63,6 +65,7 @@
 \definecolor{blue}{HTML}{0000FF}
 \definecolor{green}{HTML}{00FF00}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Header and footer styling
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -72,6 +75,7 @@
 \fancyfoot[C]{}
 
 \renewcommand{\headrulewidth}{2pt}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Table of contents styling
@@ -85,6 +89,7 @@
 \titlecontents{section}[1cm]{\addvspace{10pt}\sffamily\bfseries}{\contentslabel[\thecontentslabel]{1.25cm}}{}{\color{black}\normalsize\sffamily\bfseries\;\titlerule*[.5pc]{.}\;\thecontentspage}
 
 \titlecontents{subsection}[2cm]{\addvspace{6pt}\sffamily\bfseries}{\contentslabel[\thecontentslabel]{1.25cm}}{}{\color{black}\normalsize\sffamily\bfseries\;\titlerule*[.5pc]{.}\;\thecontentspage}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Part Styling
@@ -167,6 +172,7 @@
     \fi
 }
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Chapter Styling
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -196,15 +202,18 @@
     \vspace{0.5cm}
 }
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Section styling
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \sectionfont{\sf\color{pink}\sectionrule{0ex}{0pt}{-1ex}{1pt}}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Subsection styling
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsectionfont{\sf\color{pink}\sectionrule{0ex}{0pt}{-1ex}{1pt}}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Custom Summary Environment
@@ -212,12 +221,89 @@
 \newenvironment{boxsummary}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=pink!5,colframe=pink]}{\end{tcolorbox}}
 \newenvironment{summary}{\begin{boxsummary}}{\end{boxsummary}}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Abstract Environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newenvironment{abstract}%
     {\small\begin{center}%
     \bfseries{Abstract}}{\end{center}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Index
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{imakeidx}
+\makeindex
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom Theorem Environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{boxtheorem}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=pink!5,colframe=pink]}{\end{tcolorbox}}
+
+\newtheoremstyle{styletheorem}{0pt}{0pt}{\normalfont}{0pt}{\small\bf\sffamily\color{black}}{: }{0em}{\small\sffamily\color{black}\thmname{#1}\nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black}(#3)}\index{#3}}
+
+\theoremstyle{styletheorem}
+\newtheorem{envtheorem}{Theorem}[chapter]
+
+\newenvironment{theorem}{\begin{boxtheorem}\begin{envtheorem}}{\end{envtheorem}\end{boxtheorem}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom Definition Environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{boxdefinition}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=pink!10!white,boxrule=0pt,frame hidden,borderline west={1.5mm}{-2mm}{pink}]}{\end{tcolorbox}}
+
+\newtheoremstyle{styledefinition}
+{0pt}{0pt}{\normalfont}{0pt}{\small\bf\sffamily\color{black}}{: }{0.25em}{\small\sffamily\color{black}\thmname{#1}\nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black}(#3)}\index{#3}}
+
+\theoremstyle{styledefinition}
+\newtheorem{envdefinition}{Definition}[chapter]
+
+\newenvironment{definition}{\begin{boxdefinition}\begin{envdefinition}}{\end{envdefinition}\end{boxdefinition}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom Note Environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{boxnote}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=cyan!5,colframe=cyan]}{\end{tcolorbox}}
+
+\newtheoremstyle{stylenote}{0pt}{0pt}{\normalfont}{0pt}{\small\bf\sffamily\color{black}}{: }{0em}{\small\sffamily\color{black}\thmname{#1}\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black}(#3)}\index{#3}}
+
+\theoremstyle{stylenote}
+\newtheorem{envnote}{Note}[chapter]
+
+\newenvironment{note}{\begin{boxnote}\begin{envnote}}{\end{envnote}\end{boxnote}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom Example Environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{boxexample}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=yellow!10!white,boxrule=0pt,frame hidden]}{\end{tcolorbox}}
+
+\newtheoremstyle{styleexample}{0pt}{0pt}{\normalfont}{0pt}{\small\bf\sffamily\color{black}}{: }{0.25em}{\small\sffamily\color{black}\thmname{#1}\nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black}(#3)}}
+
+\theoremstyle{styleexample}
+\newtheorem{envexample}{Example}[chapter]
+
+\newenvironment{example}{\begin{boxexample}\begin{envexample}}{\end{envexample}\end{boxexample}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom Problem Environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{boxproblem}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=cyan!25,boxrule=0pt,frame hidden]}{\end{tcolorbox}}
+
+\newtheorem{envproblem}{Problem}[chapter]
+
+\newenvironment{problem}{\begin{boxproblem}\begin{envproblem}}{\end{envproblem}\end{boxproblem}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom Solution Environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{solution}{\noindent\textsf{\color{pink} \fbox{Solution: }} \newline}{\vskip 12pt}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -310,69 +396,5 @@
 \bibliography{main}
 \bibliographystyle{unsrt}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Index ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+\printindex
 }
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Custom Theorem Environment
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newenvironment{boxtheorem}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=pink!5,colframe=pink]}{\end{tcolorbox}}
-
-\newtheoremstyle{styletheorem}{0pt}{0pt}{\normalfont}{0pt}{\small\bf\sffamily\color{black}}{: }{0em}{\small\sffamily\color{black}\thmname{#1}\nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black}(#3)}\index{#3}}
-
-\theoremstyle{styletheorem}
-\newtheorem{envtheorem}{Theorem}[chapter]
-
-\newenvironment{theorem}{\begin{boxtheorem}\begin{envtheorem}}{\end{envtheorem}\end{boxtheorem}}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Custom Definition Environment
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newenvironment{boxdefinition}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=pink!10!white,boxrule=0pt,frame hidden,borderline west={1.5mm}{-2mm}{pink}]}{\end{tcolorbox}}
-
-\newtheoremstyle{styledefinition}
-{0pt}{0pt}{\normalfont}{0pt}{\small\bf\sffamily\color{black}}{: }{0.25em}{\small\sffamily\color{black}\thmname{#1}\nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black}(#3)}\index{#3}}
-
-\theoremstyle{styledefinition}
-\newtheorem{envdefinition}{Definition}[chapter]
-
-\newenvironment{definition}{\begin{boxdefinition}\begin{envdefinition}}{\end{envdefinition}\end{boxdefinition}}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Custom Note Environment
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newenvironment{boxnote}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=cyan!5,colframe=cyan]}{\end{tcolorbox}}
-
-\newtheoremstyle{stylenote}{0pt}{0pt}{\normalfont}{0pt}{\small\bf\sffamily\color{black}}{: }{0em}{\small\sffamily\color{black}\thmname{#1}\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black}(#3)}\index{#3}}
-
-\theoremstyle{stylenote}
-\newtheorem{envnote}{Note}[chapter]
-
-\newenvironment{note}{\begin{boxnote}\begin{envnote}}{\end{envnote}\end{boxnote}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Custom Example Environment
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newenvironment{boxexample}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=yellow!10!white,boxrule=0pt,frame hidden]}{\end{tcolorbox}}
-
-\newtheoremstyle{styleexample}{0pt}{0pt}{\normalfont}{0pt}{\small\bf\sffamily\color{black}}{: }{0.25em}{\small\sffamily\color{black}\thmname{#1}\nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black}(#3)}}
-
-\theoremstyle{styleexample}
-\newtheorem{envexample}{Example}[chapter]
-
-\newenvironment{example}{\begin{boxexample}\begin{envexample}}{\end{envexample}\end{boxexample}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Custom Problem Environment
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newenvironment{boxproblem}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=cyan!25,boxrule=0pt,frame hidden]}{\end{tcolorbox}}
-
-\newtheorem{envproblem}{Problem}[chapter]
-
-\newenvironment{problem}{\begin{boxproblem}\begin{envproblem}}{\end{envproblem}\end{boxproblem}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Custom Solution Environment
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newenvironment{solution}{\noindent\textsf{\color{pink} \fbox{Solution: }} \newline}{\vskip 12pt}
