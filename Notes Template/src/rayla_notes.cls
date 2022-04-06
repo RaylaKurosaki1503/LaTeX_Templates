@@ -6,7 +6,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{rayla_notes}[Rayla's Notes Class]
-\LoadClass[12pt,onecolumn,titlepage,twoside,openany]{book}
+\LoadClass[12pt,onecolumn,titlepage,twoside,openany]{report}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -220,14 +220,6 @@
 \newenvironment{summary}{\begin{boxsummary}}{\end{boxsummary}}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Abstract Environment
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newenvironment{abstract}%
-    {\small\begin{center}%
-    \bfseries{Abstract}}{\end{center}}
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Index
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -308,82 +300,23 @@
 % Pre Content
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\raylaStartNotes}{
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Cover Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-%\pagestyle{empty}
-%\backgroundsetup{scale=1,color=black,opacity=1.0,angle=0,contents={\includegraphics[width=\paperwidth,height=\paperheight]{images/cover}}}
-%\BgThispage
-%\begin{titlepage}
-%    \color{white}
-%	\center
-%	\textsc{\LARGE \universityloc}\\[0.5cm]
-%	\textsc{\Large \collegeloc}\\[0.5cm]
-%	\textsc{\large \departmentloc}\\[0.5cm]
-%	\rule{\linewidth}{1.0mm}\\[0.5cm]
-%	{\huge \titleloc}\\[0.5cm]
-%	\rule{\linewidth}{1.0mm}\\[0.5cm]
-%	\nameloc
-%\end{titlepage}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Title Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 \clearpage
-\pagenumbering{roman}
+%\pagenumbering{roman}
 \thispagestyle{empty}
 \begin{center}
 	\textsc{\LARGE \universityloc}\\[0.5cm]
 	\textsc{\Large \collegeloc}\\[0.5cm]
 	\textsc{\large \departmentloc}\\[0.5cm]
-%	\begin{figure}[H]
-%        \centering
-%        \includegraphics[scale=0.15]{images/Rochester_Institute_of_Techology_Logo}
-%    \end{figure}
 	\rule{\linewidth}{1.0mm}\\[0.5cm]
 	{\huge \titleloc}\\[0.5cm]
 	\rule{\linewidth}{1.0mm}\\[0.5cm]
 	\nameloc
 \end{center}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Copyright Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-%\clearpage
-%\thispagestyle{empty}
-%\null
-%\vfill
-%\begin{flushleft}
-%    Copyright \copyright \ {\startYearloc}-present \ \nameloc \\
-%    \vspace{5mm}
-%    \textbf{Copying prohibited} \\
-%    \vspace{5mm}
-%    All rights reserved. No part of this publication may be reproduced or transmitted in any form or by any means, electronic or mechanical, including photocopying and recording, or by any information storage or retrieval system, without the prior written permission of the publisher. \\
-%    \vspace{5mm}
-%    Edition \bookEditionloc \\
-%\end{flushleft}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~ Table of Contents Page ~~~~~~~~~~~~~~~~~~~~~~~~~~%
 \clearpage
 \pagestyle{fancy}
 \tableofcontents
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Blank Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-%\clearpage
-%\checkoddpage
-%\ifoddpage
-%\else
-%\input{pre_content/blank_page.tex}
-%\fi
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Title Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-%\clearpage
-%\thispagestyle{empty}
-%\begin{center}
-%	\textsc{\LARGE \universityloc}\\[0.5cm]
-%	\textsc{\Large \collegeloc}\\[0.5cm]
-%	\textsc{\large \departmentloc}\\[0.5cm]
-%	\begin{figure}[H]
-%        \centering
-%        \includegraphics[scale=0.15]{images/Rochester_Institute_of_Techology_Logo}
-%    \end{figure}
-%	\rule{\linewidth}{1.0mm}\\[0.5cm]
-%	{\huge \titleloc}\\[0.5cm]
-%	\rule{\linewidth}{1.0mm}\\[0.5cm]
-%	\nameloc
-%\end{center}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Blank Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-%\clearpage
-%\input{pre_content/blank_page.tex}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -394,5 +327,5 @@
 \bibliography{main}
 \bibliographystyle{unsrt}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Index ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-%\printindex
+\printindex
 }
