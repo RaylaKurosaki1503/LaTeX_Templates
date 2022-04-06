@@ -302,7 +302,6 @@
 \newcommand{\raylaStartNotes}{
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Title Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 \clearpage
-%\pagenumbering{roman}
 \thispagestyle{empty}
 \begin{center}
 	\textsc{\LARGE \universityloc}\\[0.5cm]
