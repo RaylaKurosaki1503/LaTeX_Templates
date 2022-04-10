@@ -62,6 +62,7 @@
 \definecolor{red}{HTML}{FF0000}
 \definecolor{blue}{HTML}{0000FF}
 \definecolor{green}{HTML}{00FF00}
+\definecolor{purple}{HTML}{A020F0}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -214,6 +215,12 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Subsubsection styling
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsectionfont{\sf\color{black}\sectionrule{0ex}{0pt}{-1ex}{1pt}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Custom Summary Environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newenvironment{boxsummary}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=pink!5,colframe=pink]}{\end{tcolorbox}}
@@ -230,7 +237,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Custom Theorem Environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newenvironment{boxtheorem}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=pink!5,colframe=pink]}{\end{tcolorbox}}
+\newenvironment{boxtheorem}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=cyan!10!white,boxrule=0pt,frame hidden,borderline west={1.5mm}{-2mm}{cyan}]}{\end{tcolorbox}}
 
 \newtheoremstyle{styletheorem}{0pt}{0pt}{\normalfont}{0pt}{\small\bf\sffamily\color{black}}{: }{0em}{\small\sffamily\color{black}\thmname{#1}\nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black}(#3)}\index{#3}}
 
@@ -257,7 +264,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Custom Note Environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newenvironment{boxnote}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=yellow!10!white,boxrule=0pt,frame hidden]}{\end{tcolorbox}}
+\newenvironment{boxnote}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=green!5,colframe=green]}{\end{tcolorbox}}
 
 \newtheoremstyle{stylenote}{0pt}{0pt}{\normalfont}{0pt}{\small\bf\sffamily\color{black}}{: }{0em}{\small\sffamily\color{black}\thmname{#1}\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black}(#3)}\index{#3}}
 
@@ -270,7 +277,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Custom Example Environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newenvironment{boxexample}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=cyan!5,colframe=cyan]}{\end{tcolorbox}}
+\newenvironment{boxexample}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=yellow!10!white,colframe=black]}{\end{tcolorbox}}
 
 \newtheoremstyle{styleexample}{0pt}{0pt}{\normalfont}{0pt}{\small\bf\sffamily\color{black}}{: }{0.25em}{\small\sffamily\color{black}\thmname{#1}\nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black}(#3)}}
 
@@ -283,7 +290,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Custom Problem Environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newenvironment{boxproblem}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=cyan!25,boxrule=0pt,frame hidden]}{\end{tcolorbox}}
+\newenvironment{boxproblem}{\begin{tcolorbox}[enhanced jigsaw,breakable,pad at break*=1mm,colback=black!10!white,colframe=black]}{\end{tcolorbox}}
 
 \newtheorem{envproblem}{Problem}[chapter]
 

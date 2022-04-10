@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.3.15)  5 APR 2022 22:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.3.15)  9 APR 2022 22:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1103,7 +1103,7 @@ LaTeX Info: Redefining \nameref on input line 23.
 
 {C:/Users/rayla/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for T1+cmss on input line 2
-5.
+4.
 
 (C:\Users\rayla\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmss.fd
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
@@ -1113,14 +1113,14 @@ File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \openout6 = `main.toc'.
 
 
-(content/courseID/courseID_main.tex)
-(C:/Users\rayla\OneDrive\GitHub\LaTeX_Templates\Notes Template\auxil\main.bbl
-[2
+(content/courseID/courseID_main.tex [2
 
 
-] [3
+]
+Chapter 1.
+(content/courseID/ch00.tex [3
 
-])
+]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1129,36 +1129,56 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[4]
+[4]))
+(C:/Users\rayla\OneDrive\GitHub\LaTeX_Templates\Notes Template\auxil\main.bbl
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[5]
+
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
+
+) [6
+
+]
 runsystem(makeindex main.idx)...executed safely (allowed).
 
 
 No file main.ind.
 (C:/Users\rayla\OneDrive\GitHub\LaTeX_Templates\Notes Template\auxil\main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 87C55DDA0151924DC1919A5DD23E4EAD;636.
  ) 
 Here is how much of TeX's memory you used:
- 28925 strings out of 478582
- 588232 string characters out of 2844344
- 978489 words of memory out of 3000000
- 46549 multiletter control sequences out of 15000+600000
- 476361 words of font info for 39 fonts, out of 8000000 for 9000
+ 28960 strings out of 478582
+ 588900 string characters out of 2844344
+ 982660 words of memory out of 3000000
+ 46590 multiletter control sequences out of 15000+600000
+ 485367 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  130i,11n,132p,496b,1127s stack positions out of 10000i,1000n,20000p,200000b,80000s
- <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
+ <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss
 1200.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ecti1200.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\ecsx2488.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecrm1200.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecrm2488.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/
-ljfour/jknappen/ec/dpi600\eccc1440.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fon
-ts/pk/ljfour/jknappen/ec/dpi600\eccc1728.pk> <C:\Users\rayla\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc2074.pk>
+0\ecsx1095.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
+/dpi600\ecss1728.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\ecsx1200.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/ljfour
+/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fonts/pk/
+ljfour/jknappen/ec/dpi600\ecsx1728.pk> <C:\Users\rayla\AppData\Local\MiKTeX\fon
+ts/pk/ljfour/jknappen/ec/dpi600\ecsx2488.pk> <C:\Users\rayla\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\rayla\AppData\Loca
+l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk> <C:\Users\rayla\AppDat
+a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1440.pk> <C:\Users\rayla\
+AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1728.pk> <C:\Users\
+rayla\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc2074.pk>
 Output written on "C:/Users\rayla\OneDrive\GitHub\LaTeX_Templates\Notes Templat
-e\out\main.pdf" (4 pages, 97278 bytes).
+e\out\main.pdf" (6 pages, 103562 bytes).
 PDF statistics:
- 327 PDF objects out of 1000 (max. 8388607)
- 40 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 360 PDF objects out of 1000 (max. 8388607)
+ 20 named destinations out of 1000 (max. 500000)
+ 205 words of extra memory for PDF output out of 10000 (max. 10000000)
 
