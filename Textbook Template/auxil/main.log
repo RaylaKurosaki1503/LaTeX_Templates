@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.3.15)  30 MAR 2022 00:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.3.15)  9 APR 2022 21:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1100,7 +1100,7 @@ t)
 \openout5 = `main.out'.
 
 \c@lstlisting=\count372
-<images/cover.jpg, id=70, 1622.06pt x 2319.66624pt>
+<images/cover.jpg, id=58, 1622.06pt x 2319.66624pt>
 File: images/cover.jpg Graphic file (type jpg)
 <use images/cover.jpg>
 Package pdftex.def Info: images/cover.jpg  used on input line 28.
@@ -1111,7 +1111,7 @@ Package pdftex.def Info: images/cover.jpg  used on input line 28.
 
 {C:/Users/rayla/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/cov
 er.jpg>]
-<images/Rochester_Institute_of_Techology_Logo.png, id=81, 1027.84pt x 1027.84pt
+<images/Rochester_Institute_of_Techology_Logo.png, id=69, 1027.84pt x 1027.84pt
 >
 File: images/Rochester_Institute_of_Techology_Logo.png Graphic file (type png)
 <use images/Rochester_Institute_of_Techology_Logo.png>
@@ -1154,26 +1154,16 @@ Overfull \hbox (24.07295pt too wide) in paragraph at lines 9--9
 []|[]  [][][][][][]  [][][][][][] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+)
+\tf@toc=\write6
+\openout6 = `main.toc'.
 
  [3
 
 
-])
-\tf@toc=\write6
-\openout6 = `main.toc'.
+] (pre_content/blank_page.tex) [4
 
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[4]
+]
 File: images/Rochester_Institute_of_Techology_Logo.png Graphic file (type png)
 <use images/Rochester_Institute_of_Techology_Logo.png>
 Package pdftex.def Info: images/Rochester_Institute_of_Techology_Logo.png  used
@@ -1181,8 +1171,8 @@ Package pdftex.def Info: images/Rochester_Institute_of_Techology_Logo.png  used
 (pdftex.def)             Requested size: 154.16934pt x 154.16934pt.
  [5
 
-
-] (pre_content/blank_page.tex) [6
+] (pre_content/blank_page.tex)
+[6
 
 ]
 \c@ttl@toc@default=\count373
@@ -1287,7 +1277,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[13]) (content/test.tex
+[13])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1297,170 +1287,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [14]
-Chapter 3.
-[15
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[16]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[17]
-Underfull \vbox (badness 4120) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[18]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[19]) (content/test.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[20]
-Chapter 4.
-[21
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[22]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[23]
-Underfull \vbox (badness 4120) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[24]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[25]) (content/test.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[26]
-Chapter 5.
-[27
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[28]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[29]
-Underfull \vbox (badness 4120) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[30]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[31])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[32]
 (C:/Users\rayla\OneDrive\GitHub\LaTeX_Templates\Textbook Template\auxil\main.bb
-l) [33
+l) [15
 
 
 ]
 runsystem(makeindex main.idx)...executed safely (allowed).
 
- (main.ind) [34
+ (main.ind) [16
 
 
 ]
@@ -1471,13 +1305,13 @@ runsystem(makeindex main.idx)...executed safely (allowed).
 (C:/Users\rayla\OneDrive\GitHub\LaTeX_Templates\Textbook Template\auxil\main.au
 x)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 53A0099C78D9087B30E055E91FEB1A0E;792.
+(rerunfilecheck)             Checksum: 9BDD33DDEE7C2834717EDF63E1FBAAA2;471.
  ) 
 Here is how much of TeX's memory you used:
- 29394 strings out of 478582
- 596388 string characters out of 2844344
- 989001 words of memory out of 3000000
- 46834 multiletter control sequences out of 15000+600000
+ 29253 strings out of 478582
+ 594267 string characters out of 2844344
+ 988799 words of memory out of 3000000
+ 46772 multiletter control sequences out of 15000+600000
  497977 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  130i,14n,132p,496b,1885s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1504,9 +1338,9 @@ pe1/public/amsfonts/cm/cmmi10.pfb><C:/Users/rayla/AppData/Local/Programs/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/rayla/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb>
 Output written on "C:/Users\rayla\OneDrive\GitHub\LaTeX_Templates\Textbook Temp
-late\out\main.pdf" (41 pages, 979798 bytes).
+late\out\main.pdf" (23 pages, 896501 bytes).
 PDF statistics:
- 867 PDF objects out of 1000 (max. 8388607)
- 162 named destinations out of 1000 (max. 500000)
- 223 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 669 PDF objects out of 1000 (max. 8388607)
+ 87 named destinations out of 1000 (max. 500000)
+ 199 words of extra memory for PDF output out of 10000 (max. 10000000)
 
